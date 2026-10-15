@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>교직의 이해 · 수업 활동</title>
+<style>
+:root{--bg:#f3f5f2;--card:#fff;--ink:#1f2a44;--sub:#5b6577;--line:#d9ded8;--acc:#2f7d6b;--accbg:#e3f1ec;--hl:#f6d860;--hlink:#1f2a44;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a22;--card:#1d2530;--ink:#e8ecf2;--sub:#9aa5b8;--line:#2f3a4a;--acc:#5fc3a8;--accbg:#1c3430;--hl:#d9b93a;--hlink:#141a22}}
+:root[data-theme="dark"]{--bg:#141a22;--card:#1d2530;--ink:#e8ecf2;--sub:#9aa5b8;--line:#2f3a4a;--acc:#5fc3a8;--accbg:#1c3430;--hl:#d9b93a;--hlink:#141a22}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.65;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:1.7rem;line-height:1.3;margin:8px 0 4px;letter-spacing:-.02em}
+h2{font-size:1.25rem;margin:0 0 6px}
+h3{font-size:1.02rem;margin:18px 0 6px}
+p{margin:6px 0}a{color:var(--acc);font-weight:600}.sub{color:var(--sub);font-size:.92rem}
+nav{display:flex;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:10px 0;z-index:5;overflow-x:auto}
+nav button{flex:1 0 auto;border:1.5px solid var(--line);background:var(--card);color:var(--ink);padding:10px 14px;border-radius:10px;font:inherit;font-size:.93rem;cursor:pointer;white-space:nowrap}
+nav button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+details.card{padding:0}details.card summary{padding:14px 16px;cursor:pointer;font-weight:700;list-style:none;display:flex;gap:10px;align-items:center}
+details.card summary::-webkit-details-marker{display:none}
+details.card summary::after{content:"+";margin-left:auto;color:var(--acc);font-size:1.3rem}
+details[open].card summary::after{content:"−"}
+details .in{padding:0 16px 14px}
+.tag{display:inline-block;background:var(--accbg);color:var(--acc);border-radius:6px;padding:1px 8px;font-size:.8rem;font-weight:700;margin-right:6px}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:11px 18px;font:inherit;font-weight:700;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn[disabled]{opacity:.4;cursor:default}
+.opt{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:12px 14px;margin:8px 0;font:inherit;cursor:pointer}
+.opt:hover{border-color:var(--acc)}
+.bar{height:12px;background:var(--line);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.prog{height:6px;background:var(--line);border-radius:3px;margin:10px 0}.prog i{display:block;height:100%;background:var(--acc);border-radius:3px;transition:width .2s}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:9px 10px;font:inherit;font-size:.92rem;text-align:left;cursor:pointer}
+.chip.sel{background:var(--hl);color:var(--hlink);border-color:var(--hl);font-weight:700}
+textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:10px}
+textarea{min-height:84px;resize:vertical}
+label{font-weight:700;font-size:.92rem;display:block;margin:12px 0 4px}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.scale{display:flex;justify-content:space-between;font-size:.8rem;color:var(--sub)}
+.timer{font-size:2.2rem;font-weight:800;font-variant-numeric:tabular-nums}
+.stance{border-left:5px solid var(--hl);padding:8px 12px;background:var(--card);border-radius:0 10px 10px 0;margin:10px 0}
+table{width:100%;border-collapse:collapse;font-size:.92rem}td,th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:top}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>교직의 이해<br>수업 활동</h1>
+<p class="sub">교직 자격증 이후의 길을 살펴보고, 내 성향을 확인하고, IB를 주제로 가치토론까지 해 봅니다.</p>
+<nav role="tablist">
+<button role="tab" aria-selected="true" data-t="a">1. 교직 이후의 진로</button>
+<button role="tab" aria-selected="false" data-t="b">2. 성향 테스트</button>
+<button role="tab" aria-selected="false" data-t="c">3. IB와 가치토론</button>
+</nav>
+
+<!-- 1 -->
+<section id="a" class="on">
+<h2>교직 자격증을 받은 뒤 갈 수 있는 길</h2>
+<p class="sub">카드를 눌러 하는 일, 준비 방법, 어울리는 사람을 확인하고 영상 링크로 현직자 이야기를 직접 들어 보세요. 마음이 가는 길에는 ★를 눌러 두세요.</p>
+<div id="vtop" class="card"></div>
+<div id="careers"></div>
+<div class="card"><b>★ 내가 관심 가는 길</b><p id="fav" class="sub">아직 선택하지 않았습니다.</p></div>
+<div class="card"><b>영상 시청 기록</b>
+<label for="v1">본 영상 (진로 이름 또는 제목)</label><textarea id="v1" style="min-height:50px"></textarea>
+<label for="v2">새로 알게 된 점과 더 궁금한 점</label><textarea id="v2"></textarea></div>
+<p class="sub">※ 임용·채용 방식과 일정은 해마다 바뀔 수 있으니 시도교육청과 각 기관의 최신 공고로 꼭 확인하세요.</p>
+</section>
+
+<!-- 2 -->
+<section id="b">
+<h2>나에게 어울리는 교육 분야 찾기</h2>
+<p class="sub">20문항 · 지금 떠오르는 느낌대로 하나씩 고르세요. 정답은 없고, 결과는 참고용입니다.</p>
+<div id="quiz" class="card"></div>
+<div id="result"></div>
+</section>
+
+<!-- 3 -->
+<section id="c">
+<h2>IB(국제 바칼로레아) 알아보기</h2>
+<div class="card">
+<p>IB는 국제 바칼로레아기구(IBO)가 운영하는 국제 교육 프로그램입니다. 암기보다 <b>탐구, 비판적 사고, 국제적 소양</b>을 강조하고, 지필시험뿐 아니라 논술·탐구보고서·구술 등 과정 중심 평가를 폭넓게 씁니다.</p>
+</div>
+<h3>연령별 4개 프로그램</h3>
+<table>
+<tr><th>프로그램</th><th>대상</th><th>특징</th></tr>
+<tr><td><b>PYP</b></td><td>3~12세</td><td>초등 단계, 주제 중심 통합 탐구</td></tr>
+<tr><td><b>MYP</b></td><td>11~16세</td><td>중등 단계, 교과 간 연계와 개인 프로젝트</td></tr>
+<tr><td><b>DP</b></td><td>16~19세</td><td>대학 입학 준비, 6개 교과군 + 핵심 3요소</td></tr>
+<tr><td><b>CP</b></td><td>16~19세</td><td>진로 관련 과정과 DP 일부 과목을 결합</td></tr>
+</table>
+<h3>DP의 핵심 3요소</h3>
+<div class="card"><p><b>TOK</b> 지식론 · 우리는 어떻게 안다고 말할 수 있는가를 따져 묻는 수업</p><p><b>EE</b> 소논문 · 스스로 주제를 정해 쓰는 탐구 논문</p><p><b>CAS</b> 창의·활동·봉사 · 수업 밖 경험과 성찰</p></div>
+
+<h3>활동 ① IB 학습자상 중 교사에게 가장 필요한 3가지는?</h3>
+<p class="sub">IB가 기르려는 10가지 학습자상입니다. 교사로서 가장 중요하다고 생각하는 3가지를 고르세요.</p>
+<div class="chips" id="lp"></div>
+<p id="lpout" class="sub"></p>
+
+<h3>활동 ② 가치토론</h3>
+<div class="card">
+<label for="topic">토론 주제</label>
+<select id="topic"></select>
+<div id="case" class="stance"></div>
+<div style="font-weight:700;font-size:.92rem;margin:12px 0 6px">이 주제에서 내가 가장 중시하는 가치 (2개까지)</div>
+<div class="chips" id="vals"></div>
+<div class="row" style="margin-top:10px">
+<button class="btn alt" id="rand">입장 무작위로 배정</button>
+<span class="sub">내 생각과 달라도 배정된 입장에서 논리를 세워 봅니다.</span>
+</div>
+<div id="stance" class="stance" hidden></div>
+
+<label for="s1">토론 전, 나의 생각 (1 반대 ~ 5 찬성) : <span id="s1v">3</span></label>
+<input type="range" id="s1" min="1" max="5" value="3">
+<div class="scale"><span>매우 반대</span><span>중립</span><span>매우 찬성</span></div>
+
+<label for="n1">① 내 입장의 근거와 그 바탕이 되는 가치</label>
+<textarea id="n1" placeholder="예: 공정성, 자율성, 배려, 효율 중 무엇을 중요하게 보았나요?"></textarea>
+<label for="n2">② 상대편이 내세울 반론 예상</label>
+<textarea id="n2"></textarea>
+<label for="n3">③ 반론에 대한 나의 재반박</label>
+<textarea id="n3"></textarea>
+
+<h3>단계별 토론 타이머</h3>
+<div id="steps" style="margin-bottom:8px"></div>
+<div class="row"><span class="timer" id="tm">02:00</span><span id="stepname" style="font-weight:700"></span></div>
+<div class="row" style="margin-top:8px"><button class="btn alt" id="pv">이전 단계</button><button class="btn" id="go">시작 / 멈춤</button><button class="btn alt" id="nx">다음 단계</button></div>
+<h3>질문 카드</h3>
+<p class="sub">교차 질문이나 자유 토론에서 막힐 때 뽑아 보세요.</p>
+<button class="btn alt" id="qc">질문 카드 뽑기</button>
+<div id="qcard" class="stance" style="font-weight:700">버튼을 눌러 질문을 뽑아 보세요.</div>
+<label for="n5">토론 관찰 메모 : 가장 설득력 있던 상대 논거와, 내가 받은 질문</label>
+<textarea id="n5"></textarea>
+
+<label for="s2">토론 후, 나의 생각 (1 반대 ~ 5 찬성) : <span id="s2v">3</span> <span id="delta" class="sub"></span></label>
+<input type="range" id="s2" min="1" max="5" value="3">
+<label for="n4">생각이 바뀌었나요? 바뀌었다면(또는 바뀌지 않았다면) 그 이유와, 교사가 된 나에게 주는 시사점</label>
+<textarea id="n4"></textarea>
+<label for="n6">교사 역할 전환 : 내가 교사라면 학생들에게 이 주제를 어떻게 지도할까요?</label>
+<textarea id="n6"></textarea>
+<label for="n7">내가 고른 IB 학습자상을 이번 토론에서 어떻게 발휘했나요?</label>
+<div class="sub" id="lpshow"></div>
+<textarea id="n7"></textarea>
+<div class="row" style="margin-top:12px"><button class="btn" id="copy">내용 복사하기</button><button class="btn alt" id="dl">텍스트 파일로 저장</button><span id="msg" class="sub"></span></div>
+</div>
+</section>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+/* 탭 */
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected',x===b));
+ document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.t));
+ window.scrollTo(0,0)});
+
+/* 1. 진로 */
+const careers=[
+["공립학교 교사","교육청 임용시험을 통과해 공립 초·중등학교에서 수업·담임·학생 지도를 맡습니다.","교육청 임용시험(1·2차) 준비, 교육실습과 교직 소양 쌓기","학생과 함께하는 일상에서 보람을 느끼는 사람"],
+["사립학교 교사","학교법인이 선발하는 사립학교에서 근무합니다. 공개채용 방식과 일정은 학교·재단마다 다릅니다.","학교별 공고 확인, 전공 실력과 수업 시연 준비","특정 학교의 교육철학에 깊이 참여하고 싶은 사람"],
+["기간제교사·강사","휴직·파견 교사의 빈자리를 맡아 일정 기간 가르칩니다. 현장 경험을 쌓는 길이 되기도 합니다.","교육청·학교 인력풀 등록, 공고 확인","임용 전 현장을 먼저 겪어 보고 싶은 사람"],
+["교육전문직 (장학사·교육연구사)","교사 경력을 쌓은 뒤 교육청·연구기관에서 정책 기획, 장학, 연구를 담당합니다.","일정 교육경력과 선발시험, 현장 경험","현장 경험을 정책과 제도 개선으로 확장하고 싶은 사람"],
+["대학원 진학·교육 연구","교육학·교과교육·상담 등을 심화하고 연구자, 교수요원, 연구원으로 나아갑니다.","관심 주제 정하기, 지도교수 탐색, 연구계획서","질문을 오래 파고드는 것을 좋아하는 사람"],
+["국제학교·해외 교육","국내외 국제학교, IB 월드스쿨, 해외 한국학교 등에서 가르칩니다. 영어 수업과 국제 자격이 요구되기도 합니다.","외국어 역량, IB 연수, 해당 국가·학교 요건 확인","다양한 문화 속에서 도전하고 싶은 사람"],
+["에듀테크·교육콘텐츠","교육 앱, 학습 플랫폼, 교재·영상 콘텐츠를 기획하고 만듭니다. 교육 현장을 아는 사람이 강점이 됩니다.","디지털 도구 활용, 콘텐츠 제작 경험, 포트폴리오","새로운 도구로 수업 문제를 풀어 보고 싶은 사람"],
+["교육 관련 공공기관·비영리","평생교육, 청소년 활동, 진로·상담 지원, 교육 NGO 등에서 학교 밖 학습을 설계합니다.","기관별 채용 공고, 관련 자격(평생교육사 등) 검토","학교 밖에서 배움의 기회를 넓히고 싶은 사람"],
+["교육 서비스 창업·교육기업","학원, 교습소, 교육 컨설팅, 교육 스타트업을 운영하거나 함께 일합니다.","시장·학습자 분석, 운영 능력, 관련 법규 확인","스스로 교육 모델을 설계하고 책임지고 싶은 사람"],
+["교과 외 교원 (상담·사서·보건 등)","전문상담교사, 사서교사, 보건교사 등은 별도의 교원자격 체계를 가집니다. 새로 자격을 취득해야 하는 경우가 많습니다.","자격 요건 확인, 대학원·연수 과정 검토","수업 밖에서 학생의 성장을 돕고 싶은 사람"]];
+const yt=q=>'https://www.youtube.com/results?search_query='+encodeURIComponent(q);
+const VT=['교사 되는 과정 임용시험 준비','현직 교사 하루 브이로그','교육전문직 장학사 되는 법','국제학교 IB 교사 현실','에듀테크 교육콘텐츠 기획자 직무','교육대학원 진학 후기'];
+$('#vtop').innerHTML='<b>먼저 영상으로 만나 보기</b><p class="sub">아래 링크는 유튜브 검색 결과로 연결됩니다. 영상은 시점에 따라 달라지니 최신 영상을 골라 보세요.</p>'+VT.map(q=>`<p style="margin:4px 0"><a href="${yt(q)}" target="_blank" rel="noopener">▶ ${q}</a></p>`).join('')+'<p style="margin:8px 0 0"><a href="https://www.career.go.kr" target="_blank" rel="noopener">▶ 커리어넷 (직업·진로 정보)</a></p>';
+const favs=new Set();
+$('#careers').innerHTML=careers.map((c,i)=>`<details class="card"><summary><span>${c[0]}</span></summary><div class="in"><p><span class="tag">하는 일</span>${c[1]}</p><p><span class="tag">준비</span>${c[2]}</p><p><span class="tag">어울리는 사람</span>${c[3]}</p><p><span class="tag">영상</span><a href="${yt(c[0]+' 현직자 인터뷰')}" target="_blank" rel="noopener">현직자 인터뷰 ▶</a> · <a href="${yt(c[0]+' 되는 방법')}" target="_blank" rel="noopener">되는 방법 ▶</a> · <a href="${yt(c[0]+' 하루 브이로그')}" target="_blank" rel="noopener">하루 브이로그 ▶</a></p><button class="btn alt" data-f="${i}">☆ 관심 길에 담기</button></div></details>`).join('');
+$('#careers').addEventListener('click',e=>{const i=e.target.dataset.f;if(i===undefined)return;
+ favs.has(i)?favs.delete(i):favs.add(i);e.target.textContent=favs.has(i)?'★ 담았어요 (누르면 취소)':'☆ 관심 길에 담기';
+ $('#fav').textContent=favs.size?[...favs].map(k=>careers[k][0]).join(' · '):'아직 선택하지 않았습니다.'});
+
+/* 2. 테스트 */
+const T={T:["교실 속 교육자","수업과 학생 곁에서 깊이 관계 맺으며 성장을 돕는 유형입니다.","공립·사립 교사, 기간제교사"],
+R:["연구·정책 설계자","원인을 분석하고 제도와 이론으로 교육을 바꾸는 유형입니다.","대학원 진학, 교육연구사·장학사, 교육 연구원"],
+C:["상담·돌봄 조력자","학생의 마음과 어려움을 살피는 데 힘이 나는 유형입니다.","전문상담교사 등 비교과 교원, 청소년 상담·복지 기관"],
+E:["에듀테크·콘텐츠 제작자","도구와 콘텐츠로 배움의 방식을 새로 만드는 유형입니다.","에듀테크 기업, 교육콘텐츠 기획·제작, 디지털 교육 전문가"],
+A:["기획·운영 조직가","계획과 체계를 세워 큰 조직을 움직이는 유형입니다.","교육행정·교육전문직, 교육 관련 공공기관, 교육기업 운영"],
+G:["글로벌 도전가","낯선 환경과 다양한 문화 속에서 힘을 내는 유형입니다.","국제학교·IB 학교, 해외 교육, 국제교류 분야"]};
+const Q=[
+["보람을 가장 크게 느끼는 순간은?",[["T","학생이 \"이제 이해했어요\"라고 말할 때"],["C","누군가의 고민을 들어주고 힘이 되었을 때"],["R","새로운 자료나 연구 결과를 발견했을 때"]]],
+["모둠 활동에서 나는 주로?",[["A","역할을 나누고 일정을 관리한다"],["E","자료, 발표 슬라이드, 영상을 만든다"],["C","분위기를 살피고 갈등을 조정한다"]]],
+["쉬는 날 더 끌리는 것은?",[["G","낯선 도시나 해외로 떠나기"],["E","새로운 앱과 도구 써 보기"],["R","책, 논문, 다큐멘터리 파고들기"]]],
+["더 끌리는 일터는?",[["T","한 학교, 한 학급과 1년을 깊게 보내는 곳"],["G","여러 나라와 문화의 사람이 섞인 곳"],["A","여러 학교와 기관을 아우르는 큰 조직"]]],
+["내가 잘하는 것은?",[["T","어려운 내용을 쉽게 설명하기"],["A","계획을 세우고 규칙·절차 정리하기"],["E","디지털 도구 다루기"]]],
+["교육 문제를 마주하면?",[["R","원인을 분석해 제도 개선안을 생각한다"],["T","내 교실에서 당장 할 수 있는 것부터 한다"],["C","힘들어하는 학생을 개별적으로 돕는다"]]],
+["일에서 원하는 환경은?",[["A","안정적이고 체계가 잡힌 환경"],["G","변화와 도전이 많은 환경"],["E","새로운 서비스를 만들며 성장하는 환경"]]],
+["외국어와 나는?",[["G","외국어를 일에서 적극 쓰고 싶다"],["T","필요한 만큼만 쓰면 충분하다"],["R","해외 연구를 읽는 데 쓰고 싶다"]]],
+["10년 뒤 되고 싶은 모습은?",[["R","교육 정책·연구 전문가"],["T","학생이 오래 기억하는 담임·수업 교사"],["E","교육 서비스를 만드는 기획자·개발자"]]],
+["가장 중요하게 여기는 가치는?",[["C","학생의 정서와 성장"],["A","공정성과 효율"],["G","열린 마음과 다양성"]]],
+["수업을 준비할 때 가장 몰입하는 일은?",[["T","학생 수준에 맞춰 설명 순서를 짜는 일"],["E","영상·퀴즈 같은 자료를 만드는 일"],["R","관련 이론과 사례를 조사하는 일"]]],
+["친구가 진로 고민을 털어놓으면?",[["C","감정을 먼저 공감하며 끝까지 들어준다"],["A","선택지를 표로 정리해 비교해 준다"],["G","해외나 다양한 경험의 기회를 찾아봐 준다"]]],
+["학교에서 새 사업을 맡게 된다면?",[["A","일정·예산·역할 계획부터 짠다"],["E","새로운 방식이나 도구를 도입해 본다"],["T","학생 반응을 살피며 현장에 맞춰 적용한다"]]],
+["자료를 읽을 때 나는?",[["R","근거와 출처가 믿을 만한지 따져 본다"],["C","인물의 감정과 상황에 이입한다"],["G","다른 나라의 사례와 비교해 본다"]]],
+["갈등 상황에서 먼저 하는 일은?",[["C","당사자들의 마음을 각각 들어 본다"],["A","규칙과 기준에 따라 정리한다"],["R","갈등의 구조적 원인을 분석한다"]]],
+["일하는 방식 중 더 편한 것은?",[["T","사람을 직접 만나며 일하기"],["E","혼자 몰입해서 결과물 만들기"],["A","여러 부서를 조율하며 일하기"]]],
+["낯선 환경에 놓이면?",[["G","설레고 빨리 적응하고 싶다"],["T","사람들과 관계부터 쌓는다"],["R","규정과 자료를 먼저 파악한다"]]],
+["가장 듣고 싶은 칭찬은?",[["T","\"설명 덕분에 이해했어요\""],["E","\"아이디어가 신선해요\""],["A","\"덕분에 일이 매끄럽게 끝났어요\""]]],
+["교육의 가장 큰 목적은?",[["R","사회의 불평등을 줄이는 것"],["C","개인의 행복과 성장"],["G","세계시민으로서의 역량"]]],
+["여유 시간을 더 쓰고 싶은 곳은?",[["E","새로운 기술 배우기"],["C","사람을 만나 이야기 나누기"],["R","관심 주제를 깊이 공부하기"]]]];
+let qi=0,sc={};
+function showQ(){
+ const [q,o]=Q[qi];
+ $('#quiz').innerHTML=`<div class="prog"><i style="width:${qi/Q.length*100}%"></i></div><p class="sub">${qi+1} / ${Q.length}</p><h3 style="margin-top:4px">${q}</h3>`+o.map(x=>`<button class="opt" data-k="${x[0]}">${x[1]}</button>`).join('')+(qi?'<button class="btn alt" id="back">이전</button>':'');
+}
+const hist=[];
+$('#quiz').addEventListener('click',e=>{
+ if(e.target.id==='back'){qi--;const k=hist.pop();sc[k]--;showQ();return}
+ const k=e.target.dataset.k;if(!k)return;
+ sc[k]=(sc[k]||0)+1;hist.push(k);qi++;
+ qi<Q.length?showQ():done()});
+function done(){
+ $('#quiz').style.display='none';
+ const r=Object.keys(T).map(k=>[k,sc[k]||0]).sort((a,b)=>b[1]-a[1]);
+ const top=r.filter(x=>x[1]===r[0][1]).concat(r.filter(x=>x[1]!==r[0][1]).slice(0,1)).slice(0,3);
+ $('#result').innerHTML=top.map((x,i)=>`<div class="card"><span class="tag">${i<1||x[1]===r[0][1]?'가장 가까운 유형':'다음으로 가까운 유형'}</span><h2>${T[x[0]][0]}</h2><p>${T[x[0]][1]}</p><p><b>살펴볼 길</b> : ${T[x[0]][2]}</p></div>`).join('')+
+ `<div class="card"><b>전체 점수</b>`+r.map(x=>`<p style="margin:8px 0 2px">${T[x[0]][0]} <span class="sub">${x[1]}점</span></p><div class="bar"><i style="width:${x[1]*5}%"></i></div>`).join('')+`</div>
+ <div class="card"><b>생각해 볼 질문</b><p>1. 결과에서 나와 맞는다고 느낀 부분, 의외였던 부분은?</p><p>2. 교사가 되더라도 이 성향을 어떻게 살릴 수 있을까?</p></div>
+ <button class="btn alt" id="redo">다시 하기</button>`;
+}
+$('#result').addEventListener('click',e=>{if(e.target.id==='redo'){qi=0;sc={};hist.length=0;$('#result').innerHTML='';$('#quiz').style.display='';showQ()}});
+showQ();
+
+/* 3. IB */
+const LP=["탐구하는 사람","지식이 풍부한 사람","사고하는 사람","소통하는 사람","원칙을 지키는 사람","열린 마음을 지닌 사람","배려하는 사람","도전하는 사람","균형 잡힌 사람","성찰하는 사람"];
+const lpSel=[];
+function drawLP(){$('#lp').innerHTML=LP.map(x=>`<button class="chip ${lpSel.includes(x)?'sel':''}" data-l="${x}">${x}</button>`).join('');
+ $('#lpout').textContent=lpSel.length?`내가 고른 학습자상 (${lpSel.length}/3) : ${lpSel.join(', ')}`:'';}
+$('#lp').addEventListener('click',e=>{const l=e.target.dataset.l;if(!l)return;
+ const i=lpSel.indexOf(l);if(i>=0)lpSel.splice(i,1);else if(lpSel.length<3)lpSel.push(l);else{$('#lpout').textContent='3개까지 고를 수 있어요. 하나를 빼고 다시 골라 보세요.';return}
+ drawLP()});drawLP();
+
+const topics=[
+["한국 공교육에 IB 방식의 탐구·서논술형 수업과 평가를 더 넓게 도입해야 한다","A고가 IB 방식의 탐구 수업을 확대하려 합니다. 학생의 사고력은 길러지지만 교사의 수업·평가 준비 부담이 크게 늘고, 대입 준비와의 연계도 걱정됩니다.","사고력·표현력 강화, 과정 중심 평가로 학습 동기 향상, 국제적 통용성","교사 업무 과중, 대입·내신 제도와의 정합성, 학교·지역 간 격차와 비용"],
+["수행평가와 서·논술형 평가를 지필평가보다 더 크게 반영해야 한다","같은 답안을 두 교사가 채점했더니 점수가 달랐습니다. 서·논술형이 늘수록 사고 과정은 잘 보이지만 채점 일관성 논란도 커집니다.","사고 과정과 표현력을 평가, 암기 위주 학습 완화","채점의 공정성·일관성 문제, 학생·교사 부담 증가"],
+["교사는 지식 전달자보다 학습 설계자가 되어야 한다","교사가 한 시간 내내 설명하는 수업과, 학생이 스스로 과제를 설계하는 수업 중 어디에서 더 많이 배울까요?","학생 주도성과 문제해결력, 평생학습 역량","기초 지식 학습의 필요, 교사의 직접 설명이 주는 효율과 안정감"],
+["학교 규칙은 학생이 스스로 정하게 해야 한다","학생회가 '교내 휴대전화 사용 규칙'을 직접 정하겠다고 합니다. 자율과 책임을 배울 기회이지만 수업 방해와 안전 문제도 걱정됩니다.","책임감, 민주시민 역량, 규칙에 대한 수용성","안전과 공동체 질서, 소수 의견 보호, 교육적 책임의 소재"],
+["교사의 교육활동 보호를 위해 학생 생활지도 권한을 더 강화해야 한다","수업을 반복해서 방해하는 학생에게 교사가 쓸 수 있는 조치가 제한적이라는 현장의 목소리가 있습니다. 한편 학생의 권리 보호도 중요합니다.","교육활동 보호, 다수 학생의 학습권 보장","학생 인권과 절차적 정당성, 권한 남용 우려"],
+["수업과 과제에서 생성형 AI 사용을 폭넓게 허용해야 한다","한 학생이 AI의 도움으로 쓴 보고서가 매우 훌륭합니다. 어디까지가 학습이고 어디부터가 대필일까요?","미래 역량 교육, 도구 활용 능력, 평가 방식 혁신의 계기","사고력 형성 저해, 평가의 공정성, 학생 간 접근성 격차"],
+["학생 수준에 따른 맞춤형 분반 수업을 확대해야 한다","수준별 수업은 학습 효율을 높일 수 있지만, 낙인 효과와 격차 고착에 대한 우려도 있습니다.","학습 효율, 학생 맞춤 지원, 학습 포기 감소","낙인과 격차 고착, 다양한 친구와 함께 배우는 가치 상실"],
+["교사 임용 선발에서 필기시험보다 수업 실연·면접의 비중을 높여야 한다","필기시험은 객관적이지만 수업 능력을 다 담지 못합니다. 실연·면접은 교직 적성을 잘 보지만 평가자의 주관 논란이 있습니다.","실제 수업·소통 역량 평가, 교직 적성 반영","공정성과 객관성, 평가자 편차, 준비 비용"]];
+const VALS=['공정성','자율성','배려','효율','안전','책임','다양성','성장'],vSel=[];
+function drawV(){$('#vals').innerHTML=VALS.map(x=>`<button class="chip ${vSel.includes(x)?'sel':''}" data-v="${x}">${x}</button>`).join('')}
+$('#vals').addEventListener('click',e=>{const v=e.target.dataset.v;if(!v)return;const i=vSel.indexOf(v);if(i>=0)vSel.splice(i,1);else{if(vSel.length>=2)vSel.shift();vSel.push(v)}drawV()});drawV();
+$('#topic').innerHTML=topics.map((t,i)=>`<option value="${i}">${t[0]}</option>`).join('');
+function setTopic(){const t=topics[$('#topic').value];$('#case').innerHTML='<b>상황</b><br>'+t[1];$('#stance').hidden=true}
+setTopic();$('#topic').onchange=setTopic;
+$('#rand').onclick=()=>{const t=topics[$('#topic').value],pro=Math.random()<.5,b=$('#stance');b.hidden=false;
+ b.innerHTML=`배정된 입장 : <b>${pro?'찬성':'반대'}</b><br><span class="sub">내 쪽에서 쓸 수 있는 논거 : ${pro?t[2]:t[3]}<br>상대가 펼칠 만한 논거 : ${pro?t[3]:t[2]}</span>`};
+function upd(){const a=+$('#s1').value,b=+$('#s2').value;$('#s1v').textContent=a;$('#s2v').textContent=b;$('#delta').textContent=a===b?'(입장 변화 없음)':`(${a} → ${b}, ${b>a?'+':''}${b-a})`}
+['s1','s2'].forEach(id=>$('#'+id).oninput=upd);
+$('#n7').onfocus=()=>{$('#lpshow').textContent='내가 고른 학습자상 : '+(lpSel.join(', ')||'활동 ①에서 먼저 골라 보세요')};
+
+const STEPS=[['입장 발표',120],['교차 질문',90],['반론',120],['재반박',60],['자유 토론',180],['최종 정리',60]];
+let si=0,left=STEPS[0][1],ivl=null;
+const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+function drawStep(){$('#stepname').textContent=`${si+1}/${STEPS.length} · ${STEPS[si][0]}`;$('#tm').textContent=fmt(Math.max(left,0));
+ $('#steps').innerHTML=STEPS.map((s,i)=>`<span class="tag" style="${i===si?'background:var(--hl);color:var(--hlink)':''}">${s[0]}</span>`).join('')}
+function stop(){clearInterval(ivl);ivl=null}
+function setStep(n){stop();si=Math.max(0,Math.min(STEPS.length-1,n));left=STEPS[si][1];drawStep()}
+$('#go').onclick=()=>{if(ivl){stop();return}if(left<=0)left=STEPS[si][1];
+ ivl=setInterval(()=>{left--;drawStep();if(left<=0){stop();try{navigator.vibrate&&navigator.vibrate(300)}catch(e){}}},1000)};
+$('#nx').onclick=()=>setStep(si+1);$('#pv').onclick=()=>setStep(si-1);drawStep();
+const QC=['그 주장의 근거는 무엇인가요?','그 가치가 서로 충돌한다면 무엇을 우선하나요?','반대 입장에서 가장 설득력 있는 한 가지를 꼽는다면?','이 주장으로 가장 불리해지는 학생은 누구일까요?','실제 학교 현장에서 실행 가능한가요?','10년 뒤에도 같은 결론일까요?','이 결정에서 교사의 책임은 무엇인가요?','말씀하신 것과 반대되는 사례가 있다면 어떻게 설명하나요?','IB 학습자상 중 이 주장과 가장 가까운 것은 무엇인가요?'];
+$('#qc').onclick=()=>{$('#qcard').textContent=QC[Math.floor(Math.random()*QC.length)]};
+
+function summary(){
+ const t=topics[$('#topic').value][0];
+ return `[교직의 이해 · 가치토론 기록]\n주제: ${t}\n중시한 가치: ${vSel.join(', ')||'(없음)'}\n배정 입장: ${$('#stance').hidden?'(없음)':$('#stance b').textContent}\n내가 고른 IB 학습자상: ${lpSel.join(', ')||'(없음)'}\n\n토론 전 생각(1~5): ${$('#s1').value}\n① 근거와 가치: ${$('#n1').value}\n② 예상 반론: ${$('#n2').value}\n③ 재반박: ${$('#n3').value}\n\n토론 후 생각(1~5): ${$('#s2').value}\n성찰·시사점: ${$('#n4').value}\n교사 역할 전환: ${$('#n6').value}\n학습자상 연결: ${$('#n7').value}\n관찰 메모: ${$('#n5').value}\n\n[진로 영상 시청 기록]\n본 영상: ${$('#v1').value}\n알게 된 점: ${$('#v2').value}\n`}
+$('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(summary());$('#msg').textContent='복사했어요.'}catch(e){$('#msg').textContent='복사에 실패했어요. 저장 버튼을 이용해 주세요.'}};
+$('#dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([summary()],{type:'text/plain'}));a.download='가치토론_기록.txt';a.click()};
+</script>
+</body>
+</html>
